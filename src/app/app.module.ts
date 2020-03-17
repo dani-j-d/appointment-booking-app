@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 import { HomeComponent } from './home/home.component';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -38,8 +41,12 @@ import { HomeComponent } from './home/home.component';
     MatToolbarModule,
     HttpClientModule,
     FormsModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    MatNativeDateModule,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
